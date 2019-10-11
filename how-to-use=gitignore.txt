@@ -1,0 +1,40 @@
+Gitignore is used to hide files from other users due to security resions.
+
+Steps to use GITIGNORE
+
+Open Hyper and add make a folder and add some files using command : touch
+
+add and write something file1.txt, file2.txt, file3.txt, secrets.txt using touch command
+
+add a new file using touch command naming .gitignore.txt (Name should be perfect as written)
+
+Type command : git init
+
+Type command : git add .(dot)  (To commit all the files)
+
+Type command : git status 	(To check all files are commited or not)
+
+Then type command : git rm --cached -r .(dot)  (To remove all the commited files)
+
+Then open .gitignore.txt (file) and specify which name_of_file.txt you want to hide 
+                As I want to hide secrets.txt
+{ In .gitignore.txt (file) # refers for comments
+	*.txt will make git to ignore all the files which ends with an extension of .txt  }
+		
+Check it by command : git status
+
+If problem still arises then problem is that .gitignore ignores just files
+ that weren't tracked before (by git add). Run git reset name_of_file to unstage the file and keep it. 
+
+In case you want to also remove the given file from the repository (after pushing),
+ use git rm --cached name_of_file.
+
+ Then Commit it to your reprository By using Command : git commit -m "Initial Commit"
+
+
+
+
+
+
+
+
